@@ -13,13 +13,16 @@ Se trata de un algoritmo [**basado en instancias**](https://es.wikipedia.org/wik
 **Ventajas**
 - Sencillo de aprender e implementar.
 - Puede ser utilizado para tareas de clasificación o regresión.
-- No es necesario construir un modelo.
+- Fase de entrenamiento rápida, no es necesario construir un modelo.
 
 **Inconvenientes**
 - Su rendimiento empeora a medida que aumenta el volumen de datos. 
 - Sensible a _k_ y a la métrica de distancia o similitud utilizada. 
 - Computacionalmente costoso.
 - Sensible a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n)
+
+**Aplicaciones**
+- Sistemas de recomendación.
 
 # **Ejemplo**
 
@@ -42,5 +45,5 @@ Dada la siguiente imagen...
 | _k=4_ |      2     |     2     |       2=2               |
 | _k=5_ |      2     |     3     |       2<3 → Cuadrado    |
 
-Como vemos, siempre es mejor escoger un número impar de vecinos, de forma que no tengamos empates.
 
+Siempre es mejor escoger un número impar de vecinos, de forma que no tengamos empates.

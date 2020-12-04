@@ -26,6 +26,9 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 - Clústers varían en función de la semilla escogida en la inicialización. 
 - Sensible a _outliers_ y a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
 
+**Aplicaciones**:
+- Segmentación de clientes
+
 # **Ejemplo**
 
 <p align="center">
@@ -34,10 +37,10 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 
 <br />
 
-1. En la primera imagen, _k-means_ genera aleatoriamente tres centroides en el espacio de los datos ($k=3$). No se ha empleado el método de Forgy, puesto que no ha utilizado observaciones de los datos como centroides iniciales.
+1. En la primera imagen, _k-means_ genera aleatoriamente tres centroides en el espacio de los datos (_k=3_). No se ha empleado el método de Forgy, puesto que no ha utilizado observaciones de los datos como centroides iniciales (se puede observar en las siguientes imágenes, cuando los centroides iniciales se mueven de posición).
 
 2. En la segunda imagen, se asocia cada observación al centroide más cercando, formando tres clusters. Las particiones se representan mediante diagramas de Voronoi.
 
-3. A continuación, se actualiza la posición del centroide de cada grupo, en función del promedio de las observaciones pertenecientes. En el grupo rojo sólo hay una observación, por eso el centroide se coloca justo encima de ella.
+3. Se actualiza la posición del centroide de cada grupo, en función del promedio de las observaciones pertenecientes. En el grupo rojo sólo hay una observación, por eso el centroide se coloca justo encima de ella.
 
 4. Se repiten los pasos 2 y 3 hasta que se logre la convergencia.

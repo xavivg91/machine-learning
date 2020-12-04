@@ -523,8 +523,8 @@ summary {
 <ol start="2" style="list-style-type: decimal">
 <li><p><strong>Asignación</strong>. Cada observación de los datos es asignada a su centroide más cercano, utilizando la distancia euclidiana.</p></li>
 <li><p><strong>Actualización</strong>. Se actualiza la posición del centroide de cada grupo, tomando como nuevo centroide la posición del promedio de las observaciones pertenecientes.</p></li>
+<li><p>Repetir los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral.</p></li>
 </ol>
-<p>4.- Repetir los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral.</p>
 <p>¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. La varianza dentro de grupos debe ser reducida (observaciones dentro de un mismo grupo tienen que ser similares) y la varianza entre grupos debe ser grande (observaciones de distintos grupos tienen que ser distintas).</p>
 <p>Por tanto, el algoritmo <em>k-means</em> resuelve un problema de optimización, siendo la función a optimizar (minimizar) la suma de las distancias de cada objeto al centroide de su cluster. Otro criterio podría ser el de maximizar la suma de distancias entre grupos.</p>
 <p><strong>Ventajas</strong>: Simple, flexible y eficiente. Los resultados son fáciles de interpretar.</p>

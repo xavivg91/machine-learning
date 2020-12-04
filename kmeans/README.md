@@ -1,6 +1,6 @@
 # **El algoritmo k-means**
 
-_k-means_ es un algoritmo **no supervisado** que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Partición de un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿No supervisado? Sí, significa que las observaciones dadas en el conjunto de datos no están etiquetadas, no hay ningún resultado que predecir. El algoritmo sigue los siguientes pasos:
+_k-means_ es un algoritmo [**no supervisado**](https://es.wikipedia.org/wiki/Aprendizaje_no_supervisado) que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Es decir, se segmenta un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿Qué significa que sea un algoritmo no supervisado? Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún resultado que predecir. Veamos en más detalle las operaciones que realiza _k-means_:
 
 1. **Inicialización**. Se establecen _k_ centroides en el espacio de los datos, escogidos aleatoriamente. El valor _k_ lo indica el usuario al ejecutar el algoritmo. 
 
@@ -11,15 +11,20 @@ _k-means_ es un algoritmo **no supervisado** que se utiliza para **agrupar** obs
 
 3. **Actualización**. Se actualiza la posición del centroide de cada grupo, tomando como nuevo centroide la posición del promedio de las observaciones pertenecientes.
 
-4. Repetir los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral.
+4. **Repetición** de los pasos 2 y 3 hasta que se logre la convergencia.
 
 ¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. La varianza dentro de grupos debe ser reducida (observaciones dentro de un mismo grupo tienen que ser similares) y la varianza entre grupos debe ser grande (observaciones de distintos grupos tienen que ser distintas). 
 
 Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo la función a optimizar (minimizar) la suma de las distancias de cada objeto al centroide de su cluster. Otro criterio podría ser el de maximizar la suma de distancias entre grupos.
 
-**Ventajas**: Simple, flexible y eficiente. Los resultados son fáciles de interpretar.
+**Ventajas**: 
+- Simple, flexible y eficiente. 
+- Los resultados son fáciles de interpretar.
 
-**Inconvenientes**: Definir número de grupos (_elbow method_). Resultado varía en función de la semilla escogida en la inicialización. Sensible a _outliers_.
+**Inconvenientes**: 
+- Definir número de grupos (_elbow method_). 
+- Clústers varían en función de la semilla escogida en la inicialización. 
+- Sensible a _outliers_ y a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
 
 # **Ejemplo**
 

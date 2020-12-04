@@ -521,7 +521,7 @@ summary {
 <li>Normalizar los datos. Esta primera operación puede mejorar la exactitud del algoritmo.</li>
 <li>Calcular la distancia entre la instancia a clasificar y cada una de las instancias del conjunto de entrenamiento. Se suele utilizar la distancia euclidiana, aunque también puede emplearse la distancia de Manhattan o Chebyshev, entre otras.</li>
 <li>Seleccionamos los <em>k</em> elementos más cercanos</li>
-<li>De los elementos seleccionados, ¿cuál es la clase/etiqueta mayoritaria? Una instancia es asignada a una clase si esta es la clase más frecuente entre los <em>k</em> vecinos de entrenamiento.</li>
+<li>De los elementos seleccionados, ¿cuál es la clase/etiqueta mayoritaria? Una instancia es asignada a una clase si esta es la clase más frecuente entre los <em>k</em> vecinos de entrenamiento más cercanos.</li>
 </ol>
 <p>Se trata de un algoritmo <strong>basado en instancias</strong> (<em>lazy learning</em>). Esto significa que el algoritmo no aprende un modelo o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con las instancias de entrenamiento. Sensible a <em>k</em> y a la métrica de distancia o similitud utilizada.</p>
 <p><strong>Ventajas</strong>: Sencillo de aprender e implementar.</p>

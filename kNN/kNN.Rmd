@@ -9,151 +9,93 @@ output:
     highlight: tango
 ---
 
-# **El algoritmo k-NN**
+# Preparación
 
-<center>
-_"Dime con quién andas y té diré quién eres"_
-</center>
-
-<br />
-
-El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de clasificación **supervisada**, es decir, tenemos etiquetado nuestro conjunto de datos de entrenamiento. El algoritmo clasifica cada nueva instancia según el grupo al que pertenecen sus _k_ vecinos más cercanos (_k_ instancias del conjunto de entrenamiento más cercanas). Los pasos son los siguientes:
-
-1. Normalizar los datos. Esta primera operación puede mejorar la exactitud del algoritmo.
-2. Calcular la distancia entre la instancia a clasificar y cada una de las instancias del conjunto de entrenamiento. Se suele utilizar la distancia euclidiana, aunque también puede emplearse la distancia de Manhattan o Chebyshev, entre otras. 
-3. Seleccionamos los _k_ elementos más cercanos
-4. De los elementos seleccionados, ¿cuál es la clase/etiqueta mayoritaria? Una instancia es asignada a una clase si esta es la clase más frecuente entre los _k_ vecinos de entrenamiento más cercanos.
-
-Se trata de un algoritmo **basado en instancias** (_lazy learning_). Esto significa que el algoritmo no aprende un modelo o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con las instancias de entrenamiento. Sensible a _k_ y a la métrica de distancia o similitud utilizada. 
-
-**Ventajas**: Sencillo de aprender e implementar.
-
-**Inconvenientes**: Funciona bien con pocos datos, pero su rendimiento empeora para data sets con muchas filas y columnas. Recordemos que para cada nueva instancia a clasificar, el algoritmo tiene que calcular la distancia con todas las instancias de entrenamiento.
-
-# **Ejemplo**
-
-Dada la siguiente imagen...
-
-<center>
-![](C:/Users/xviva/OneDrive/Desktop/knn_ejemplo.png){width=35%}
-</center>
-
-
-- El punto verde es la instancia a clasificar
-- Los triangulos y cuadrados son instancias del conjunto de entrenamiento, pertenecientes a dos grupos diferentes.
-
-¿A qué grupo pertenecerá el punto verde? Depende del valor de _k_:
-
-Para $k=1$ → Se clasificará como triángulo, ya que la instancia más cercana es un triángulo
-
-Para $k=2$ → Las dos instancias más cercanas son triángulos, así que se clasificará como triángulo
-
-Para $k=3$ → Las tres instancias más cercanas son dos triángulos y un cuadrado. Como predominan los triángulos, se clasificará como triángulo.
-
-Para $k=5$ → Las cinco instancias más cercanas son dos triángulos y tres cuadrados, así que se clasificará como cuadrado.
-
-... y así sucesivamente.
-
-# **Código**
-
-Vamos a utilizar el data set iris. Es una mierda, pero nos sirve perfectamente como ejemplo simple de cómo aplicar el algoritmo.
-
-## Preparación de los datos
-
-Primero leemos los datos, los normalizamos y los separamos en conjuntos de entrenamiento y test.
+Leemos los datos, los normalizamos y los separamos en conjuntos de entrenamiento (70%) y test (30%).
 
 ```{r}
-# Cargamos librerías
+# Load library
 library(class)
 
-# Leemos datos 
+# Read data
 data <- iris
 
-# Normalizamos datos (excepto columna objetivo)
+# Normalization of all columns except Species
 data[, -5] <- scale(iris[, -5])
 
-# Resultados reproducibles
+# Reproducible results
 set.seed(1234)
 
-# 70% entrenamiento y 30% test
+# 70% train and 30% test
 ind <- sample(2, nrow(data), replace=TRUE, prob=c(0.7, 0.3))
 trainData <- data[ind==1,]
 testData <- data[ind==2,]
 ```
 
-## Ejecución de k-NN
+## Ejecución 
 
-A continuación ejecutamos el algoritmo con los siguientes parámetros:
+Ejecutamos el algoritmo con los siguientes parámetros:
 
-* `train`. Matriz o data frame con los datos de entrenamiento.
+* `train`. Matriz o _data frame_ con los datos de entrenamiento.
 
-* `test`. Matriz o data frame con los datos de test. Estos son los datos que el algoritmo tiene que clasificar.
+* `test`. Matriz o _data frame_ con los datos de test. Estos son los datos que el algoritmo tiene que clasificar.
 
 * `cl`. Etiquetas de los datos de entrenamiento.
 
-* `k`. Número de vecinos.
+* `k`. Número de vecinos a considerar.
 
 ```{r}
-# Ejecución con k=1
-KnnTestPrediction_k1 <- knn(trainData[,-5], testData[,-5],
+# Execution of k-NN with k=1
+KnnTestPrediction_k1 <- knn(trainData[, -5], testData[, -5],
                             trainData$Species, k=1, prob=TRUE)
 
-# Ejecución con k=2
-KnnTestPrediction_k2 <- knn(trainData[,-5], testData[,-5],
+# Execution of k-NN with k=2
+KnnTestPrediction_k2 <- knn(trainData[, -5], testData[, -5],
                             trainData$Species, k=2, prob=TRUE)
 
-# Ejecución con k=3
-KnnTestPrediction_k3 <- knn(trainData[,-5], testData[,-5],
+# Execution of k-NN with k=3
+KnnTestPrediction_k3 <- knn(trainData[, -5], testData[, -5],
                             trainData$Species, k=3, prob=TRUE)
-
-# Ejecución con k=4
-KnnTestPrediction_k4 <- knn(trainData[,-5], testData[,-5],
-                            trainData$Species, k=4, prob=TRUE)
 ```
 
 ## Evaluación
 
-Es momento de evaluar la precisión del algoritmo mediante matrices de confusión.
+Evaluamos la precisión del algoritmo mediante matrices de confusión.
 
 ```{r}
-# Matriz de confusión para k=1
+# Confusion matrix of KnnTestPrediction_k1
 table(testData$Species, KnnTestPrediction_k1)
 ```
+
 ¿Cómo interpretamos esta tabla?
 
-* Las 10 observaciones pertenecientes a setosa han sido clasificadas correctamente como setosa
+* Las 10 observaciones pertenecientes a setosa han sido clasificadas correctamente como setosa.
 
-* Las 12 observaciones pertenecientes a versicolor han sido clasificadas correctamente como versicolor
+* Las 12 observaciones pertenecientes a versicolor han sido clasificadas correctamente como versicolor.
 
 * 2 observaciones pertenecientes a virginica han sido clasificadas erróneamente como versicolor.
 
 El _accuracy_ es el siguiente:
 
 ```{r}
-# Accuracy para k=1
+# Classification accuracy of KnnTestPrediction_k1
 sum(KnnTestPrediction_k1==testData$Species)/length(testData$Species)*100
 ```
 
 Para los otros valores de _k_:
 
 ```{r}
-# Matriz de confusión para k=2
+# Confusion matrix of KnnTestPrediction_k2
 table(testData$Species, KnnTestPrediction_k2)
 
-# Accuracy para k=2
+# Classification accuracy of KnnTestPrediction_k2
 sum(KnnTestPrediction_k2==testData$Species)/length(testData$Species)*100
 
-# Matriz de confusión para k=3
+# Confusion matrix of KnnTestPrediction_k3
 table(testData$Species, KnnTestPrediction_k3)
 
-# Accuracy para k=3
+# Classification accuracy of KnnTestPrediction_k3
 sum(KnnTestPrediction_k3==testData$Species)/length(testData$Species)*100
-
-# Matriz de confusión para k=4
-table(testData$Species, KnnTestPrediction_k4)
-
-# Accuracy para k=4
-sum(KnnTestPrediction_k4==testData$Species)/length(testData$Species)*100
 ```
 
 ## Elección de _k_

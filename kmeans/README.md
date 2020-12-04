@@ -23,9 +23,9 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 
 # **Ejemplo**
 
-<center>
-![](C:/Users/xviva/OneDrive/Desktop/kmeans_ejemplo.png){width=75%}
-</center>
+<p align="center">
+<img src='kmeans_ejemplo.PNG' height="175" /></a>
+</p>
 
 <br />
 

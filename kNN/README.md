@@ -29,17 +29,18 @@ Dada la siguiente imagen...
 <img src='knn_ejemplo.png' height="225" /></a>
 </p>
 
-- El punto verde es la instancia a clasificar
+- El punto verde es una nueva instancia a clasificar.
 - Los triangulos y cuadrados son instancias del conjunto de entrenamiento, pertenecientes a dos grupos diferentes.
 
 ¿A qué grupo pertenecerá el punto verde? Depende del valor de _k_:
 
-Para k=1 → Se clasificará como triángulo, ya que la instancia más cercana es un triángulo
+| _k_   | Triángulos | Cuadrados | El punto verde será...  |
+|-------| -----------|-----------|-------------------------|
+| _k=1_ |      1     |     0     |       1>0 → Triángulo   |
+| _k=2_ |      2     |     0     |       2>0 → Triángulo   |
+| _k=3_ |      2     |     1     |       2>1 → Triángulo   |
+| _k=4_ |      2     |     2     |       2=2               |
+| _k=5_ |      2     |     3     |       2<3 → Cuadrado    |
 
-Para k=2 → Las dos instancias más cercanas son triángulos, así que se clasificará como triángulo
+Como vemos, siempre es mejor escoger un número impar de vecinos, de forma que no tengamos empates.
 
-Para k=3 → Las tres instancias más cercanas son dos triángulos y un cuadrado. Como predominan los triángulos, se clasificará como triángulo.
-
-Para k=5 → Las cinco instancias más cercanas son dos triángulos y tres cuadrados, así que se clasificará como cuadrado.
-
-... y así sucesivamente.

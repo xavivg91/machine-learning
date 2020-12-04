@@ -12,7 +12,7 @@
                         
 In this repository you can find basic examples of how to apply some machine learning algorithms, using R or Python. I try to explain it in a simple way, step by step and with reproducible code. 
 
-Machine learning is a large field of study, so I would like to have my own guide to consult quickly in case of doubts. I will update the repository with more algorithms!
+Machine learning is a large field of study, so I would like to have my own guide to consult quickly in case of doubts. I will update the repository with more algorithms, so stay tuned!
 
 
 

@@ -17,21 +17,21 @@ Se trata de un algoritmo **basado en instancias** (_lazy learning_). Esto signif
 
 Dada la siguiente imagen...
 
-<center>
-![](kNN/knn_ejemplo.png){width=35%}
-</center>
+<p align="center">
+<img src='knn_ejemplo.png' height="225" /></a>
+</p>
 
 - El punto verde es la instancia a clasificar
 - Los triangulos y cuadrados son instancias del conjunto de entrenamiento, pertenecientes a dos grupos diferentes.
 
 ¿A qué grupo pertenecerá el punto verde? Depende del valor de _k_:
 
-Para $k=1$ → Se clasificará como triángulo, ya que la instancia más cercana es un triángulo
+Para k=1 → Se clasificará como triángulo, ya que la instancia más cercana es un triángulo
 
-Para $k=2$ → Las dos instancias más cercanas son triángulos, así que se clasificará como triángulo
+Para k=2 → Las dos instancias más cercanas son triángulos, así que se clasificará como triángulo
 
-Para $k=3$ → Las tres instancias más cercanas son dos triángulos y un cuadrado. Como predominan los triángulos, se clasificará como triángulo.
+Para k=3 → Las tres instancias más cercanas son dos triángulos y un cuadrado. Como predominan los triángulos, se clasificará como triángulo.
 
-Para $k=5$ → Las cinco instancias más cercanas son dos triángulos y tres cuadrados, así que se clasificará como cuadrado.
+Para k=5 → Las cinco instancias más cercanas son dos triángulos y tres cuadrados, así que se clasificará como cuadrado.
 
 ... y así sucesivamente.

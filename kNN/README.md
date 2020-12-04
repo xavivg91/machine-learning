@@ -19,7 +19,7 @@ Se trata de un algoritmo [**basado en instancias**](https://es.wikipedia.org/wik
 - Su rendimiento empeora a medida que aumenta el volumen de datos. 
 - Sensible a _k_ y a la métrica de distancia o similitud utilizada. 
 - Computacionalmente costoso.
-- Sensible a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n)
+- Sensible a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
 
 **Aplicaciones**
 - Sistemas de recomendación.

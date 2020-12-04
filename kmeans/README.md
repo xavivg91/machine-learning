@@ -11,7 +11,7 @@ _k-means_ es un algoritmo **no supervisado** que se utiliza para **agrupar** obs
 
 3. **Actualización**. Se actualiza la posición del centroide de cada grupo, tomando como nuevo centroide la posición del promedio de las observaciones pertenecientes.
 
-4.- Repetir los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral.
+4. Repetir los pasos 2 y 3 hasta que los centroides no se mueven, o se mueven por debajo de una distancia umbral.
 
 ¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. La varianza dentro de grupos debe ser reducida (observaciones dentro de un mismo grupo tienen que ser similares) y la varianza entre grupos debe ser grande (observaciones de distintos grupos tienen que ser distintas). 
 

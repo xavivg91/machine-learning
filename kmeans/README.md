@@ -4,8 +4,8 @@ _k-means_ es un algoritmo **no supervisado** que se utiliza para **agrupar** obs
 
 1. **Inicialización**. Se establecen _k_ centroides en el espacio de los datos, escogidos aleatoriamente. El valor _k_ lo indica el usuario al ejecutar el algoritmo. 
 
-  + Método de Forgy. Elige aleatoriamente _k_ observaciones del conjunto de datos y las            utiliza como centroides. Tiende a dispersar los centroides iniciales.
-  + Método de partición aleatoria. Asigna aleatoriamente un clúster para cada observación y        después procede a la etapa de actualización. Ubica los centroides cerca del centro del         conjunto de datos.
+    - Método de Forgy. Elige aleatoriamente _k_ observaciones del conjunto de datos y las utiliza como centroides. Tiende a dispersar los centroides iniciales.
+    - Método de partición aleatoria. Asigna aleatoriamente un clúster para cada observación y después procede a la etapa de actualización. Ubica los centroides cerca del               centro del conjunto de datos.
 
 2. **Asignación**. Cada observación de los datos es asignada a su centroide más cercano, utilizando la distancia euclidiana.
 

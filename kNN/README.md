@@ -4,7 +4,7 @@ El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de 
 
 0. Como paso previo, es necesario normalizar los datos. Esta primera operación puede mejorar la exactitud del algoritmo.
 1. Calcular la distancia entre la nueva instancia a clasificar y cada una de las instancias del conjunto de entrenamiento. Se suele utilizar la distancia euclidiana, aunque también puede emplearse la distancia de Manhattan o Chebyshev, entre otras. 
-2. Seleccionar los _k_ vecinos más cercanos
+2. Seleccionar los _k_ vecinos más cercanos.
 3. Asignar a la nueva instancia la clase/etiqueta mayoritaria entre los _k_ vecinos más cercanos.
 4. Repetir los pasos 1, 2 y 3 para el resto de instancias a clasificar.
 

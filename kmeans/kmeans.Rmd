@@ -58,9 +58,9 @@ data_k2$size
 
 Adicionalmente, también podemos consultar las siguientes métricas:
 
-* `betweenss`. Varianza entre grupos. Suma de las distancias entre centroides. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers heterogéneos.
+* `betweenss`. Varianza entre grupos. Suma de las distancias entre centroides. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers alejados.
  
-* `withinss`. Varianza dentro de grupos. Suma de las distancias entre cada punto del clúster y su centroide. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean similares. `withinss`nos devuelve una varianza por cada clúster.
+* `withinss`. Varianza dentro de grupos. Suma de las distancias entre cada punto del clúster y su centroide. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean cercanas. `withinss`nos devuelve una varianza por cada clúster.
 
 * `tot.withinss`. Suma de las varianzas dentro de grupos. 
 

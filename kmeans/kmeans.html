@@ -512,8 +512,8 @@ summary {
 <pre><code>## [1] 84 94</code></pre>
 <p>Adicionalmente, también podemos consultar las siguientes métricas:</p>
 <ul>
-<li><p><code>betweenss</code>. Varianza entre grupos. Suma de las distancias entre centroides. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers heterogéneos.</p></li>
-<li><p><code>withinss</code>. Varianza dentro de grupos. Suma de las distancias entre cada punto del clúster y su centroide. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean similares. <code>withinss</code>nos devuelve una varianza por cada clúster.</p></li>
+<li><p><code>betweenss</code>. Varianza entre grupos. Suma de las distancias entre centroides. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers alejados.</p></li>
+<li><p><code>withinss</code>. Varianza dentro de grupos. Suma de las distancias entre cada punto del clúster y su centroide. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean cercanas. <code>withinss</code>nos devuelve una varianza por cada clúster.</p></li>
 <li><p><code>tot.withinss</code>. Suma de las varianzas dentro de grupos.</p></li>
 <li><p><code>totss</code>. Suma de <code>betweenss</code> y <code>withinss</code>.</p></li>
 </ul>

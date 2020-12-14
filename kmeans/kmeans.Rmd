@@ -58,9 +58,9 @@ data_k2$size
 
 Adicionalmente, también podemos consultar las siguientes métricas:
 
-* `betweenss`. Varianza entre grupos. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers heterogéneos.
+* `betweenss`. Varianza entre grupos. Suma de las distancias entre centroides. En una segmentación óptima, este valor debe ser lo más grande posible, ya que nos interesa obtener clústers heterogéneos.
  
-* `withinss`. Varianza dentro de grupos. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean similares. `withinss`nos devuelve una varianza por cada clúster.
+* `withinss`. Varianza dentro de grupos. Suma de las distancias entre cada punto del clúster y su centroide. En una segmentación óptima, este valor debe ser lo más pequeño posible, puesto que nos interesa que las observaciones dentro de un mismo grupo sean similares. `withinss`nos devuelve una varianza por cada clúster.
 
 * `tot.withinss`. Suma de las varianzas dentro de grupos. 
 
@@ -119,7 +119,17 @@ df %>%
         legend.title=element_blank())
 
 ```
-Para seleccionar el valor óptimo de k, se escoge el punto a partir del cual se dejan de producir variaciones significativas de los valores de varianza entre grupos y dentro de grupos (método del codo). En este caso, queda claro que a partir de tres clústers dejan de producirse diferencias significativas.
+
+Para seleccionar el valor óptimo de _k_, se escoge el punto a partir del cual se dejan de producir variaciones significativas de los valores de varianza entre grupos y dentro de grupos (método del codo). En este caso, queda claro que a partir de tres clústers dejan de producirse diferencias significativas.
+
+```{r message=FALSE, warning=FALSE, fig.align='center'}
+# Reproducible results
+set.seed(800)
+
+# Single function to compute the “Elbow method”
+fviz_nbclust(data, kmeans, method="wss")
+```
+
 
 ## Resultados
 
@@ -203,7 +213,7 @@ ggplot() +
   geom_point(aes(x=Alcohol, y=Ash, color=cluster), data=dataNorm, size=2, show.legend=FALSE) +
   
   # Centroids
-  geom_point(aes(x=kmeans3$centers[, 1], y=kmeans3$centers[, 3]), color='black', size=5) +
+  geom_point(aes(x=kmeans3$centers[, 1], y=kmeans3$centers[, 3]), color='black', size=5, shape=17) +
   
   labs(title="k-means con k=3", subtitle="Datos normalizados") +
   scale_colour_gradientn(colours=rainbow(4)) +
@@ -227,7 +237,7 @@ ggplot() +
   geom_point(aes(x=Alcohol, y=Malic_Acid, color=cluster), data=data, size=2, show.legend=FALSE) +
   
   # Centroids
-  geom_point(aes(x=centroids[, 2], y=centroids[, 3]), color='black', size=5) +
+  geom_point(aes(x=centroids[, 2], y=centroids[, 3]), color='black', size=5, shape=17) +
   
   labs(title="k-means con k=3", subtitle="Datos originales") +
   scale_colour_gradientn(colours=rainbow(4)) +

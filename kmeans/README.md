@@ -11,7 +11,7 @@ _k-means_ es un algoritmo [**no supervisado**](https://es.wikipedia.org/wiki/Apr
 
 3. **Actualización**. Se actualiza la posición del centroide de cada grupo, tomando como nuevo centroide la posición del promedio de las observaciones pertenecientes.
 
-4. **Repetición** de los pasos 2 y 3 hasta que se logre la convergencia.
+4. **Repetición** de los pasos 2 y 3 hasta lograr la convergencia.
 
 ¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. La varianza dentro de grupos debe ser reducida (observaciones dentro de un mismo grupo tienen que ser similares) y la varianza entre grupos debe ser grande (observaciones de distintos grupos tienen que ser distintas). 
 
@@ -27,7 +27,7 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 - Sensible a _outliers_ y a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
 
 **Aplicaciones**:
-- Segmentación de clientes
+- Segmentación de clientes.
 
 # **Ejemplo**
 
@@ -43,4 +43,4 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 
 3. Se actualiza la posición del centroide de cada grupo, en función del promedio de las observaciones pertenecientes. En el grupo rojo sólo hay una observación, por eso el centroide se coloca justo encima de ella.
 
-4. Se repiten los pasos 2 y 3 hasta que se logre la convergencia.
+4. Se repiten los pasos 2 y 3 hasta lograr la convergencia.

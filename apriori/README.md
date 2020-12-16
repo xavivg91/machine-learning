@@ -1,0 +1,3 @@
+# **El algoritmo apriori**
+
+

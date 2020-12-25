@@ -16,6 +16,9 @@ En la tabla superior podemos ver siete transacciones pertenecientes a una tienda
 
 <img src="https://render.githubusercontent.com/render/math?math= I=\{i_1, i_2,..., i_k\}">
 
+$$I=\{i_1, i_2,..., i_k\}$$
+
+$$T=\{t_1, t_2,..., t_n\}$$
 
 
 I=\{T\text- shirt, Trousers, Belt, Jacket, Gloves, Sneakers\}$$

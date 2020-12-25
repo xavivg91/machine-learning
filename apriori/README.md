@@ -31,9 +31,9 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
 
 - **Soporte** (_support_). Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones. Dicho de otra forma, es el porcentaje de transacciones que aglutinan X e Y a la vez.
 
-<img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}"> 
-<br />
-<img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}"> 
+  <br/>
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
 
 - **Confianza** (_confidence_). De entre las transacciones que contienen _X_, nos indica el porcentaje de las que además contienen _Y_.
 

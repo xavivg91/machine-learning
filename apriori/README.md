@@ -35,10 +35,7 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
    
    Ejemplos:
    
-   - <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
-
-* $supp(T\text- shirt \Rightarrow Trousers)=\dfrac{3}{7}=43 \%$
-
-* $supp(Trousers \Rightarrow Belt)=\dfrac{4}{7}= 57 \%$
+    <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+    <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}">
 
 

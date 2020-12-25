@@ -6,7 +6,7 @@ El algoritmo apriori permite encontrar reglas de asociación significativas en c
 |:--------------|:-------------------------------------------------------|
 | t1            | {Camiseta, Pantalón, Cinturón}                         | 
 | t2            | {Camiseta, Chaqueta}                                   |   
-| t3            | {Jacket, Guantes}                                      |  
+| t3            | {Chaqueta, Guantes}                                    |  
 | t4            | {Camiseta, Pantalón, Chaqueta}                         | 
 | t5            | {Camiseta, Pantalón, Zapatillas, Chaqueta, Cinturón}   |   
 | t6            | {Pantalón, Zapatillas, Cinturón}                       |
@@ -20,14 +20,17 @@ En la tabla superior podemos ver siete transacciones pertenecientes a una tienda
 | Transacciones                             | <img src="https://render.githubusercontent.com/render/math?math=T=\{t_1,%20t_2,...,%20t_n\}">| <img src="https://render.githubusercontent.com/render/math?math=t_1=\{Camiseta,%20Pantalon,%20Cinturon\}">  |
 | Regla de asociación                       | <img src="https://render.githubusercontent.com/render/math?math=X%20\Rightarrow%20Y">, donde <br /> <img src="https://render.githubusercontent.com/render/math?math=X,%20Y%20\subset%20I"> y <img src="https://render.githubusercontent.com/render/math?math=X%20\cap%20Y = 0">|   <img src="https://render.githubusercontent.com/render/math?math=\{Camiseta, Pantalon\} \Rightarrow \{Cinturon\}">|
 
-Una **regla de asociación** nos indica, dado un ítem A, la probabilidad de que ocurra un ítem B. Con los siguientes ejemplos puede verse claro:
+Una **regla de asociación** nos indica, dado un ítem X, la probabilidad de que ocurra un ítem Y. Por ejemplo,
 
   - Los clientes que compran leche, probablemente también comprarán cereales.
   - Los alumnos que cursan la asignatura _Machine Learning_, probablemente también cursarán la asignatura _Deep Learning_.
 
-Pero, ¿qué significa y cómo definimos este "probablemente"? Podemos utilizar las medidas de soporte y esperanza:
+Para medir el grado de precisión de una regla, disponemos de dos métricas, el soporte y la esperanza.
 
-- **Soporte**. 
+- **Soporte**. Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones.
+
+<img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}">
+
 
 
 

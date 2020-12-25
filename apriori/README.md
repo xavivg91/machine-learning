@@ -18,7 +18,7 @@ En la tabla superior podemos ver siete transacciones pertenecientes a una tienda
 |:------------------------------------------|:-------------------------------------------------------|:------------------------------------|
 | Conjunto de ítems (_item set_)            | <img src="https://render.githubusercontent.com/render/math?math=I=\{i_1,%20i_2,...,%20i_k\}">| <img src="https://render.githubusercontent.com/render/math?math=I=\{Camiseta,%20Pantalon,%20Cinturon,%20Chaqueta,%20Guantes,%20Zapatillas\}">|
 | Transacciones                             | <img src="https://render.githubusercontent.com/render/math?math=T=\{t_1,%20t_2,...,%20t_n\}">| <img src="https://render.githubusercontent.com/render/math?math=t_1=\{Camiseta,%20Pantalon,%20Cinturon\}">  |
-| Regla de asociación                       | <img src="https://render.githubusercontent.com/render/math?math=X%20\Rightarrow%20Y">, donde <br /> <img src="https://render.githubusercontent.com/render/math?math=X,%20Y%20\subset%20I"> y <img src="https://render.githubusercontent.com/render/math?math=X%20\cap%20Y = 0">|   <img src="https://render.githubusercontent.com/render/math?math=\{Camiseta, Pantalon\} \Rightarrow \{Cinturon\}">|
+| Regla de asociación                       | <img src="https://render.githubusercontent.com/render/math?math=X%20\Rightarrow%20Y">, donde <br /> <img src="https://render.githubusercontent.com/render/math?math=X,%20Y%20\subset%20I"> y <img src="https://render.githubusercontent.com/render/math?math=X%20\cap%20Y=0">|   <img src="https://render.githubusercontent.com/render/math?math=\{Camiseta, Pantalon\} \Rightarrow \{Cinturon\}">|
 
 
 

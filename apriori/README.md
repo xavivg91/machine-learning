@@ -12,51 +12,15 @@ El algoritmo apriori permite encontrar reglas de asociación significativas en c
 | t6            | {Pantalón, Zapatillas, Cinturón}                       |
 | t7            | {Pantalón, Cinturón, Zapatillas}                       | 
 
-En la tabla superior podemos ver siete transacciones pertenecientes a una tienda de ropa. Podemos representar un **conjunto de ítems** (_item set_) como
+En la tabla superior podemos ver siete transacciones pertenecientes a una tienda de ropa. A continuación, y utilizando el ejemplo expuesto, vamos a ir definiendo los conceptos necesarios para entender el algoritmo apriori.
 
-<img src="https://render.githubusercontent.com/render/math?math=I=\{i_1,%20i_2,...,%20i_k\}">
- 
-En nuestro ejemplo, 
+|                                           | Definición                                             | Ejemplo                             | 
+|:------------------------------------------|:-------------------------------------------------------|:------------------------------------|
+| Conjunto de ítems (_item set_)            | <img src="https://render.githubusercontent.com/render/math?math=I=\{i_1,%20i_2,...,%20i_k\}">| <img src="https://render.githubusercontent.com/render/math?math=I=\{Camiseta,%20Pantalon,%20Cinturon,%20Chaqueta,%20Guantes,%20Zapatillas\}">|
+| Transacciones                             | <img src="https://render.githubusercontent.com/render/math?math=T=\{t_1,%20t_2,...,%20t_n\}">| <img src="https://render.githubusercontent.com/render/math?math=t_1=\{Camiseta,%20Pantalon,%20Cinturon\}">  |
+| Regla de asociación                       | <img src="https://render.githubusercontent.com/render/math?math=X%20\Rightarrow%20Y">, <br /> <img src="https://render.githubusercontent.com/render/math?math=X,%20Y%20\subset%20I"> y <img src="https://render.githubusercontent.com/render/math?math=X%20\cap%20Y">|   <img src="https://render.githubusercontent.com/render/math?math=\{Camiseta, Pantalon\} \Rightarrow \{Cinturon\}">|
 
-<img src="https://render.githubusercontent.com/render/math?math=I=\{Camiseta,%20Pantalon,%20Cinturon,%20Chaqueta,%20Guantes,%20Zapatillas\}">
-
-Una transacción se puede representar mediante la siguiente expresión:
-
-<img src="https://render.githubusercontent.com/render/math?math=T=\{t_1,%20t_2,...,%20t_n\}">
-
-A **transaction** is represented by the following expression:
-
-$$T=\{t_1, t_2,..., t_n\}$$
-
-For example,
-
-$$t_1=\{T\text- shirt, Trousers, Belt\}$$
-
-Then, an **association rule** is defined as an implication of the form:
-
-<center> $X \Rightarrow Y$, where $X \subset I$, $Y \subset I$ and $X \cap Y = 0$ </center>
-
-For example, 
-
-
-$$I=\{i_1, i_2,..., i_k\}$$
-
-$$T=\{t_1, t_2,..., t_n\}$$
-
-
-I=\{T\text- shirt, Trousers, Belt, Jacket, Gloves, Sneakers\}$$
-
-
-
-
-In the table above we can see seven transactions from a clothing store. Each transaction shows items bought in that transaction. We can represent our items as an **item set** as follows:
-
-
-
-In our case it corresponds to:
-
-
-- Una **regla de asociación** nos indica, dado un ítem A, la probabilidad de que ocurra un ítem B. Veamos los siguientes dos ejemplos:
+Una regla de asociación nos indica, dado un ítem A, la probabilidad de que ocurra un ítem B.Veamos los siguientes dos ejemplos:
 
   - Los clientes que compran leche, probablemente también comprarán cereales.
   - Los alumnos que cursan la asignatura _Machine Learning_, probablemente también cursarán la asignatura _Deep Learning_.

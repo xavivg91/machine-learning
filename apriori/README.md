@@ -29,14 +29,28 @@ Una **regla de asociación** nos indica, dado un ítem X, la probabilidad de que
 
 Para medir el grado de precisión de una regla disponemos de dos métricas, el soporte y la esperanza.
 
-- **Soporte**. Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones.
+- **Soporte** (_support_). Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones. Dicho de otra forma, es el porcentaje de transacciones que aglutinan X e Y a la vez.
 
-   <img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}">
+<img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}"> 
+<br />
+<img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+
+- **Confianza** (_confidence_). De entre las transacciones que contienen _X_, nos indica el porcentaje de las que además contienen _Y_.
+
+|               | Definición                                             | Ejemplo              |
+|:--------------|:-------------------------------------------------------|:---------------------|
+| Soporte       |    |  |
+| Confianza     |                               |   
+
+
+
+r, de entre las transacciones que
+contienen X, es el porcentaje de las que además contienen Y.
    
    Ejemplos:
    
-    <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
-    <br />
+    
+    
     <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}">
 
 

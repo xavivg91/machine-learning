@@ -1,0 +1,224 @@
+---
+title: "**apriori algorithm**"
+author: Xavier Vivancos García
+date: '`r Sys.Date()`'
+output: 
+  html_document:
+    number_sections: yes
+    theme: cosmo
+    highlight: tango
+---
+
+# Preparación {.tabset .tabset-fade .tabset-pills}
+
+Leemos e inspeccionamos los datos.
+
+```{r message=FALSE, warning=FALSE}
+# Load libraries
+library(tidyverse) 
+library(arules) 
+library(arulesViz) 
+library(gridExtra)
+library(knitr) 
+
+# Read the data
+trans <- read.transactions("https://raw.githubusercontent.com/xavivg91/machine-learning/main/apriori/transactions.csv", format="single", cols=c(3,4), sep=",", rm.duplicates=TRUE)
+```
+
+## Transaction object
+```{r}
+# Transaction object
+trans
+```
+
+## Summary
+```{r}
+# Summary
+summary(trans)
+```
+
+## Glimpse
+```{r message=FALSE}
+# Glimpse
+glimpse(trans)
+```
+
+## Structure
+```{r}
+# Structure
+str(trans)
+```
+
+
+# Elección de soporte y confianza
+
+¿Cuáles son los umbrales óptimos de soporte y confianza? Para valores bajos, el algoritmo tardará más en ejecutar y nos devolverá muchísimas reglas (la mayoría de ellas no nos servirán). Para valores muy altos, es probable que no obtengamos reglas. Probemos, pues, con diferentes valores de soporte y confianza, y veamos gráficamente cuántas reglas se generan para cada caso.
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+# Support and confidence values
+supportLevels <- c(0.1, 0.05, 0.01, 0.005)
+confidenceLevels <- c(0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1)
+
+# Empty integers 
+rules_sup10 <- integer(length=9)
+rules_sup5 <- integer(length=9)
+rules_sup1 <- integer(length=9)
+rules_sup0.5 <- integer(length=9)
+
+# Apriori algorithm with a support level of 10%
+for (i in 1:length(confidenceLevels)) {
+  
+  rules_sup10[i] <- length(apriori(trans, parameter=list(sup=supportLevels[1], 
+                                   conf=confidenceLevels[i], target="rules")))
+  
+}
+
+# Apriori algorithm with a support level of 5%
+for (i in 1:length(confidenceLevels)){
+  
+  rules_sup5[i] <- length(apriori(trans, parameter=list(sup=supportLevels[2], 
+                                  conf=confidenceLevels[i], target="rules")))
+  
+}
+
+# Apriori algorithm with a support level of 1%
+for (i in 1:length(confidenceLevels)){
+  
+  rules_sup1[i] <- length(apriori(trans, parameter=list(sup=supportLevels[3], 
+                                  conf=confidenceLevels[i], target="rules")))
+  
+}
+
+# Apriori algorithm with a support level of 0.5%
+for (i in 1:length(confidenceLevels)){
+  
+  rules_sup0.5[i] <- length(apriori(trans, parameter=list(sup=supportLevels[4], 
+                                    conf=confidenceLevels[i], target="rules")))
+  
+}
+```
+
+```{r fig.align='center'}
+# Number of rules found with a support level of 10%
+plot1 <- qplot(confidenceLevels, rules_sup10, geom=c("point", "line"), 
+               xlab="Confidence level", ylab="Number of rules found", 
+               main="Apriori with a support level of 10%") +
+  theme_bw()
+
+# Number of rules found with a support level of 5%
+plot2 <- qplot(confidenceLevels, rules_sup5, geom=c("point", "line"), 
+               xlab="Confidence level", ylab="Number of rules found", 
+               main="Apriori with a support level of 5%") + 
+  scale_y_continuous(breaks=seq(0, 10, 2)) +
+  theme_bw()
+
+# Number of rules found with a support level of 1%
+plot3 <- qplot(confidenceLevels, rules_sup1, geom=c("point", "line"), 
+               xlab="Confidence level", ylab="Number of rules found", 
+               main="Apriori with a support level of 1%") + 
+  scale_y_continuous(breaks=seq(0, 50, 10)) +
+  theme_bw()
+
+# Number of rules found with a support level of 0.5%
+plot4 <- qplot(confidenceLevels, rules_sup0.5, geom=c("point", "line"), 
+               xlab="Confidence level", ylab="Number of rules found", 
+               main="Apriori with a support level of 0.5%") + 
+  scale_y_continuous(breaks=seq(0, 130, 20)) +
+  theme_bw()
+
+# Subplot
+grid.arrange(plot1, plot2, plot3, plot4, ncol=2)
+```
+
+```{r fig.align='center'}
+# Data frame
+num_rules <- data.frame(rules_sup10, rules_sup5, rules_sup1, rules_sup0.5, confidenceLevels)
+
+# Number of rules found with a support level of 10%, 5%, 1% and 0.5%
+ggplot(data=num_rules, aes(x=confidenceLevels)) +
+  
+  # Plot line and points (support level of 10%)
+  geom_line(aes(y=rules_sup10, colour="Support level of 10%")) + 
+  geom_point(aes(y=rules_sup10, colour="Support level of 10%")) +
+  
+  # Plot line and points (support level of 5%)
+  geom_line(aes(y=rules_sup5, colour="Support level of 5%")) +
+  geom_point(aes(y=rules_sup5, colour="Support level of 5%")) +
+  
+  # Plot line and points (support level of 1%)
+  geom_line(aes(y=rules_sup1, colour="Support level of 1%")) + 
+  geom_point(aes(y=rules_sup1, colour="Support level of 1%")) +
+  
+  # Plot line and points (support level of 0.5%)
+  geom_line(aes(y=rules_sup0.5, colour="Support level of 0.5%")) +
+  geom_point(aes(y=rules_sup0.5, colour="Support level of 0.5%")) +
+  
+  # Labs and theme
+  labs(x="Confidence levels", y="Number of rules found", 
+       title="Apriori algorithm with different support levels") +
+  theme_bw() +
+  theme(legend.title=element_blank(),
+        legend.position="bottom")
+```
+
+* **Soporte de 10%**. Sólo identificamos unas pocas reglas con valores de confianza muy bajos. Esto significa que no hay asociaciones frecuentes en nuestro data set. 
+
+* **Soporte de 5%**. Mismo problema, pocas reglas con valores de confianza bajos. Sólo identificamos una regla de como mínimo 50% de confianza. 
+
+* **Soporte de 1%**. Empezamos a obtener un mayor número de reglas, varias de ellas con mínimo 50% de confianza. 
+
+* **Soporte de 0.5%**. Demasiadas reglas que analizar.
+
+# Ejecución
+
+Ejecutamos el algoritmo con un soporte de 5% y una confianza de 50%. 
+
+```{r message=FALSE, warning=FALSE, results='hide'}
+# Apriori algorithm execution with a support level of 1% and a confidence level of 50%
+rules_sup1_conf50 <- apriori(trans, parameter=list(sup=supportLevels[3], 
+                             conf=confidenceLevels[5], target="rules"))
+```
+Las reglas obtenidas son las siguientes:
+
+```{r}
+# Inspect association rules
+inspect(rules_sup1_conf50)
+```
+# Resultados
+
+```{r fig.align='center'}
+# Scatter plot
+plot(rules_sup1_conf50, measure=c("support", "lift"), shading="confidence")
+```
+
+```{r fig.align='center'}
+# Graph (default layout)
+plot(rules_sup1_conf50, method="graph")
+```
+
+```{r fig.align='center'}
+# Graph (circular layout)
+plot(rules_sup1_conf50, method="graph", control=list(layout=igraph::in_circle()))
+```
+
+```{r fig.align='center'}
+# Grouped matrix plot
+plot(rules_sup1_conf50, method="grouped")
+```
+
+# arulesViz
+
+Con la librería arulesViz podemos crear gráficos y tablas interactivos. 
+
+```{r}
+# Load libraries
+library(shiny)
+library(shinythemes)
+
+# Interactive visualizations
+rules <- apriori(trans, parameter=list(sup=supportLevels[4], 
+                             conf=confidenceLevels[9], target="rules"))
+inspectDT(rules)
+ruleExplorer(rules)
+```
+

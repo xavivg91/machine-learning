@@ -29,7 +29,8 @@ Una **regla de asociación** nos indica, dado un ítem X, la probabilidad de que
 
 Para medir el grado de precisión de una regla disponemos de dos métricas, el soporte y la esperanza.
 
-- **Soporte** (_support_). Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones. Dicho de otra forma, es el porcentaje de transacciones que aglutinan X e Y a la vez.
+- **Soporte** (_support_). Medida de la probabilidad de que se dé <img src="https://render.githubusercontent.com/render/math?math=X \cup Y"> en nuestro espacio de transacciones. Dicho de otra forma, es el porcentaje de transacciones que aglutinan X e Y a la vez. Para valores demasiado bajos, nos indica que la regla no va a ser de gran utilidad por su
+escasa incidencia.
 
   <img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}"> 
   <br/>
@@ -38,7 +39,7 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
   <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}=0.57">
 
 
-- **Confianza** (_confidence_). De entre las transacciones que contienen _X_, nos indica el porcentaje de las que además contienen _Y_.
+- **Confianza** (_confidence_). De entre las transacciones que contienen _X_, nos indica el porcentaje de las que además contienen _Y_. Valores demasiado bajos nos indicarán que la regla será poco fiable.
 
   <img src="https://render.githubusercontent.com/render/math?math=Confianza(X \Rightarrow Y)=\dfrac{Soporte(X \cup Y)}{Soporte(X)}"> 
   <br/>
@@ -46,12 +47,4 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
   <br/>
   <img src="https://render.githubusercontent.com/render/math?math=Confianza(Camiseta \Rightarrow Cinturon)=\dfrac{2/7}{4/7}=0.5">
 
-
-
-
-
-   
-    
-    
-
-
+El algoritmo apriori genera combinaciones de ítems que son subconjuntos de _I_ y devuelve únicamente aquellas reglas con valores de soporte y confianza por encima del mínimo establecido.

@@ -33,24 +33,27 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
 
   <img src="https://render.githubusercontent.com/render/math?math=Soporte(X \Rightarrow Y)=\dfrac{|X \cup Y|}{n}"> 
   <br/>
-  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}=0.43">
+  <br/>
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}=0.57">
+
 
 - **Confianza** (_confidence_). De entre las transacciones que contienen _X_, nos indica el porcentaje de las que además contienen _Y_.
 
-|               | Definición                                             | Ejemplo              |
-|:--------------|:-------------------------------------------------------|:---------------------|
-| Soporte       |    |  |
-| Confianza     |                               |   
+  <img src="https://render.githubusercontent.com/render/math?math=Confianza(X \Rightarrow Y)=\dfrac{Soporte(X \cup Y)}{Soporte(X)}"> 
+  <br/>
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+  <br/>
+  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}">
 
 
+* $conf(Trousers \Rightarrow Belt)=\dfrac{4/7}{5/7}= 80 \%$
 
-r, de entre las transacciones que
-contienen X, es el porcentaje de las que además contienen Y.
-   
-   Ejemplos:
+* $conf(T\text- shirt \Rightarrow Belt)=\dfrac{2/7}{4/7}=50 \%$
+
+
    
     
     
-    <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}">
 
 

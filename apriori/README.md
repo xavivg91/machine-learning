@@ -42,14 +42,12 @@ Para medir el grado de precisión de una regla disponemos de dos métricas, el s
 
   <img src="https://render.githubusercontent.com/render/math?math=Confianza(X \Rightarrow Y)=\dfrac{Soporte(X \cup Y)}{Soporte(X)}"> 
   <br/>
-  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Camiseta \Rightarrow Pantalon)=\dfrac{3}{7}">
+  <img src="https://render.githubusercontent.com/render/math?math=Confianza(Pantalon \Rightarrow Cinturon)=\dfrac{4/7}{5/7}=0.8">
   <br/>
-  <img src="https://render.githubusercontent.com/render/math?math=Soporte(Pantalon \Rightarrow Cinturon)=\dfrac{4}{7}">
+  <img src="https://render.githubusercontent.com/render/math?math=Confianza(Camiseta \Rightarrow Cinturon)=\dfrac{2/7}{4/7}=0.5">
 
 
-* $conf(Trousers \Rightarrow Belt)=\dfrac{4/7}{5/7}= 80 \%$
 
-* $conf(T\text- shirt \Rightarrow Belt)=\dfrac{2/7}{4/7}=50 \%$
 
 
    

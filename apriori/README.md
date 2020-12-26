@@ -47,4 +47,4 @@ escasa incidencia.
   <br/>
   <img src="https://render.githubusercontent.com/render/math?math=Confianza(Camiseta \Rightarrow Cinturon)=\dfrac{2/7}{4/7}=0.5">
 
-El algoritmo apriori genera combinaciones de ítems que son subconjuntos de _I_ y devuelve únicamente aquellas reglas con valores de soporte y confianza por encima del mínimo establecido.
+El algoritmo apriori identifica todas las combinaciones de ítems que son subconjuntos de _I_ y están presentes en nuestras transacciones (como mínimo en una de ellas), y devuelve únicamente aquellas reglas con valores de soporte y confianza por encima del mínimo establecido.

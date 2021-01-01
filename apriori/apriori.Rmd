@@ -208,16 +208,20 @@ plot(rules_sup1_conf50, method="grouped")
 
 # arulesViz
 
-Con la librería arulesViz podemos crear gráficos y tablas interactivos. 
+Con la librería arulesViz podemos crear gráficos y tablas interactivas. 
 
-```{r}
+```{r results='hide'}
 # Load libraries
 library(shiny)
 library(shinythemes)
 
-# Interactive visualizations
+# Apriori algorithm execution
 rules <- apriori(trans, parameter=list(sup=supportLevels[4], 
                              conf=confidenceLevels[9], target="rules"))
+```
+
+```{r}
+# Interactive tables
 inspectDT(rules)
 ruleExplorer(rules)
 ```

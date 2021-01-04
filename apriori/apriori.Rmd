@@ -178,12 +178,14 @@ Ejecutamos el algoritmo con un soporte de 5% y una confianza de 50%.
 rules_sup1_conf50 <- apriori(trans, parameter=list(sup=supportLevels[3], 
                              conf=confidenceLevels[5], target="rules"))
 ```
+
 Las reglas obtenidas son las siguientes:
 
 ```{r}
 # Inspect association rules
 inspect(rules_sup1_conf50)
 ```
+
 # Resultados
 
 ```{r fig.align='center'}
@@ -218,11 +220,9 @@ library(shinythemes)
 # Apriori algorithm execution
 rules <- apriori(trans, parameter=list(sup=supportLevels[4], 
                              conf=confidenceLevels[9], target="rules"))
-```
 
-```{r}
 # Interactive tables
-inspectDT(rules)
-ruleExplorer(rules)
+# inspectDT(rules)
+# ruleExplorer(rules)
 ```
 

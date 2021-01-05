@@ -10,10 +10,13 @@ El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de 
 
 Se trata de un algoritmo [**basado en instancias**](https://es.wikipedia.org/wiki/Aprendizaje_vago) (_lazy learning_). Esto significa que el algoritmo no aprende un modelo o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con las instancias de entrenamiento. 
 
+Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no presupone una forma concreta de los datos de entrenamiento y no utiliza una función para aproximarlos. En la regresión lineal, por ejemplo, se utiliza la función de una recta para aproximar los datos. 
+
 **Ventajas**
 - Sencillo de aprender e implementar.
 - Puede ser utilizado para tareas de clasificación o regresión.
-- Fase de entrenamiento rápida, no es necesario construir un modelo.
+- No hay fase de entrenamiento, puesto que no aprende un modelo.
+- Capaz de clasificar instancias en tres o más categorías (_multiclass classification_).
 
 **Inconvenientes**
 - Su rendimiento empeora a medida que aumenta el volumen de datos. 
@@ -23,6 +26,9 @@ Se trata de un algoritmo [**basado en instancias**](https://es.wikipedia.org/wik
 
 **Aplicaciones**
 - Sistemas de recomendación.
+- Predecir si una persona es apta o no para recibir un préstamo bancario. Comprobar si los datos del cliente son similares o no a los de usuarios ya clasificados como morosos. 
+
+Banking system – KNN can be used to predict if a person is fit for loan approval. Or if he or she has similar traits to a defaulter. 
 
 # **Ejemplo**
 

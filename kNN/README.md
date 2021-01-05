@@ -8,7 +8,7 @@ El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de 
 3. Asignar a la nueva instancia la clase/etiqueta mayoritaria entre los _k_ vecinos más cercanos.
 4. Repetir los pasos 1, 2 y 3 para el resto de instancias a clasificar.
 
-Se trata de un algoritmo [**basado en instancias**](https://en.wikipedia.org/wiki/Lazy_learning) (_lazy learning_). Esto significa que el algoritmo no aprende un modelo o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con las instancias de entrenamiento. 
+Se trata de un algoritmo [**basado en instancias**](https://en.wikipedia.org/wiki/Lazy_learning) (_lazy learning_). Esto significa que el algoritmo no aprende un modelo o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con las instancias de entrenamiento. El aprendizaje se produce directamente con los datos de prueba. 
 
 Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no presupone una forma concreta de los datos de entrenamiento y no utiliza una función para aproximarlos. En la regresión lineal, por ejemplo, se utiliza la función de una recta para aproximar los datos. 
 

@@ -6,7 +6,7 @@
 
 - [**_Lazy learning_**](https://en.wikipedia.org/wiki/Lazy_learning). El algoritmo no aprende un modelo global o una generalización durante la fase de entrenamiento, simplemente guarda en memoria todas las instancias y espera a recibir nuevas observaciones a clasificar. El atributo objetivo es estimado de forma local, para cada nueva instancia. Su fase de entrenamiento es rápida (no construye un modelo global), mientras que la predicción es más lenta (modelo local para cada instancia). 
 
-  Un ejemplo de algoritmo perezoso y basado en instancias es k-NN, donde la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. En este caso, el modelo local para cada nueva instancia consiste en la comparación con todas las instancias del conjunto de entrenamiento y la posterior elección de las _k_ más cercanas.
+  Un ejemplo de algoritmo perezoso y basado en instancias es k-NN, donde la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. En este caso, el modelo local para cada nueva instancia implica la comparación con todas las instancias del conjunto de entrenamiento, la posterior elección de las _k_ más cercanas y la asignación de la etiqueta mayoritaria.
 
 - [**_Eager learning_**](https://en.wikipedia.org/wiki/Eager_learning). A diferencia del aprendizaje basado en instancias, en este caso el algoritmo aprende un modelo global o una generalización a partir del conjunto de entrenamiento, antes de recibir nuevas instancias a clasificar. El modelo global construido se aplica para estimar la clase/etiqueta de todas las nuevas instancias. Dedica más tiempo al entrenamiento (aprende un modelo) que a la predicción. Ejemplos: árboles de decisión, _Support Vector Machines_, etc.
 

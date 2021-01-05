@@ -71,9 +71,9 @@ table(testData$Species, KnnTestPrediction_k1)
 
 * Las 10 observaciones pertenecientes a setosa han sido clasificadas correctamente como setosa.
 
-* Las 12 observaciones pertenecientes a versicolor han sido clasificadas correctamente como versicolor.
+* De las 14 observaciones pertenecientes a versicolor, el modelo ha clasificado 2 como virginica.
 
-* 2 observaciones pertenecientes a virginica han sido clasificadas erróneamente como versicolor.
+* Las 14 observaciones pertenecientes a virginica han sido clasificadas correctamente como virginica.
 
 El _accuracy_ es el siguiente:
 

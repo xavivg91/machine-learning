@@ -13,7 +13,7 @@ _k-means_ es un algoritmo [**no supervisado**](https://en.wikipedia.org/wiki/Uns
 
 4. **Repetición** de los pasos 2 y 3 hasta lograr la convergencia.
 
-¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo la función a optimizar (minimizar) la suma de las distancias de cada observación al centroide de su cluster. Otro criterio podría ser el de maximizar la suma de distancias entre grupos.
+¿Cuál es el objetivo? Una segmentación óptima es aquella donde las observaciones pertenecientes a un mismo grupo son lo más homogéneas posible, y las observaciones pertenecientes a distintos grupos son lo más heterogéneas posible. Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo la función a optimizar (minimizar) la suma de distancias de cada observación al centroide de su cluster. Otro criterio podría ser el de maximizar la suma de distancias entre grupos.
 
 **Ventajas**: 
 - Simple, flexible y eficiente. 

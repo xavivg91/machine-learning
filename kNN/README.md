@@ -15,7 +15,7 @@ Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, 
 **Ventajas**
 - Sencillo de aprender e implementar.
 - Puede ser utilizado para tareas de clasificación o regresión.
-- No hay fase de entrenamiento, puesto que no aprende un modelo.
+- Fase de entrenamiento rápida, puesto que no aprende un modelo.
 - Capaz de clasificar instancias en tres o más categorías (_multiclass classification_).
 
 **Inconvenientes**

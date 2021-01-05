@@ -1,6 +1,6 @@
 # **Conceptos importantes**
 
-- **Conjunto de datos** (_data set_). Colección de datos formada por columnas (atributos) y filas (instancias u observaciones). En algoritmos supervisados de _machine learning_ es necesario particionar nuestros datos en dos subconjuntos: conjunto de entrenamiento y conjunto de prueba.
+- **[Conjunto de datos](https://en.wikipedia.org/wiki/Data_set)** (_data set_). Colección de datos formada por columnas (atributos) y filas (instancias u observaciones). En algoritmos supervisados de _machine learning_, es necesario particionar nuestros datos en dos subconjuntos: conjunto de entrenamiento y conjunto de prueba.
 
 - **Instancia**. Observación, fila, registro, objeto, ejemplo, etc. en un conjunto de datos. En una tabla con datos de jugadores de baloncesto, por ejemplo, cada fila es una instancia y representa a un jugador de baloncesto diferente. A su vez, cada instancia se compone de diferentes **atributos** (_features_) categóricos o cuantitativos, como pueden ser la edad, peso, altura, años de experiencia, nacionalidad, liga, etc. de los deportistas.
 
@@ -10,7 +10,7 @@
 
 - **[Conjunto de prueba](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets)** (_test set_). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo, una vez ha sido entrenado, es predecir la variable objetivo de las instancias de prueba. 
 
-- **[Matriz de confusión](https://en.wikipedia.org/wiki/Confusion_matrix)**. Herramienta para evaluar los modelos de clasificación.
+- **[Matriz de confusión](https://en.wikipedia.org/wiki/Confusion_matrix)**. Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 
 - [**Aprendizaje supervisado**](https://en.wikipedia.org/wiki/Supervised_learning) (_supervised learning_). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, después de haber aprendido a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta/clase correspondiente a cualquier instancia de entrada. Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_, etc. 
 

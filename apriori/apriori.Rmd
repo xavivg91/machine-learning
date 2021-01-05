@@ -60,10 +60,10 @@ supportLevels <- c(0.1, 0.05, 0.01, 0.005)
 confidenceLevels <- c(0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1)
 
 # Empty integers 
-rules_sup10 <- integer(length=9)
-rules_sup5 <- integer(length=9)
-rules_sup1 <- integer(length=9)
-rules_sup0.5 <- integer(length=9)
+rules_sup10 <- numeric()
+rules_sup5 <- numeric()
+rules_sup1 <- numeric()
+rules_sup0.5 <- numeric()
 
 # Apriori algorithm with a support level of 10%
 for (i in 1:length(confidenceLevels)) {

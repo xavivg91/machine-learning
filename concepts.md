@@ -4,7 +4,7 @@
 
 - [**Aprendizaje no supervisado**](https://en.wikipedia.org/wiki/Unsupervised_learning) (_unsupervised learning_). Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Ejemplos: _k-means_, _Principal Component Analysis_, etc. 
 
-- [**_Lazy learning_**](https://en.wikipedia.org/wiki/Lazy_learning). El algoritmo no aprende un modelo global o una generalización durante la fase de entrenamiento, simplemente guarda en memoria todas las instancias y espera a recibir nuevas observaciones a clasificar. El atributo objetivo es estimado de forma local, para cada nueva instancia. Su fase de entrenamiento es rápida (no construye un modelo global), mientras que la predicción es más lenta (modelo local para cada instancia). 
+- [**_Lazy learning_**](https://en.wikipedia.org/wiki/Lazy_learning). El algoritmo no aprende un modelo global o una generalización durante la fase de entrenamiento, simplemente guarda en memoria todas las instancias y espera a recibir nuevas observaciones a clasificar. El atributo objetivo es estimado de forma local, para cada nueva instancia. Su fase de entrenamiento es rápida (no construye un modelo global), mientras que la predicción es más lenta (modelo local para cada nueva instancia). 
 
   Un ejemplo de algoritmo perezoso y basado en instancias es k-NN, donde la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. En este caso, el modelo local para cada nueva instancia implica la comparación con todas las instancias del conjunto de entrenamiento, la posterior elección de las _k_ más cercanas y la asignación de la etiqueta mayoritaria.
 

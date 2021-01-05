@@ -1,6 +1,6 @@
 # **El algoritmo k-means**
 
-_k-means_ es un algoritmo [**no supervisado**](https://es.wikipedia.org/wiki/Aprendizaje_no_supervisado) que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Es decir, se segmenta un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿Qué significa que sea un algoritmo no supervisado? Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Veamos en más detalle las operaciones que realiza _k-means_:
+_k-means_ es un algoritmo [**no supervisado**](https://en.wikipedia.org/wiki/Unsupervised_learning) que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Es decir, se segmenta un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿Qué significa que sea un algoritmo no supervisado? Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Veamos en más detalle las operaciones que realiza _k-means_:
 
 1. **Inicialización**. Se establecen _k_ centroides en el espacio de los datos, escogidos aleatoriamente. El valor _k_ lo indica el usuario al ejecutar el algoritmo. 
 
@@ -24,7 +24,7 @@ Por tanto, el algoritmo _k-means_ resuelve un problema de optimización, siendo 
 **Inconvenientes**: 
 - Definir número de grupos (_elbow method_). 
 - Clústers varían en función de la semilla escogida en la inicialización. 
-- Sensible a _outliers_ y a la [maldición de la dimensión](https://es.wikipedia.org/wiki/Maldici%C3%B3n_de_la_dimensi%C3%B3n).
+- Sensible a _outliers_ y a la [maldición de la dimensión](https://en.wikipedia.org/wiki/Curse_of_dimensionality).
 
 **Aplicaciones**:
 - Segmentación de clientes.

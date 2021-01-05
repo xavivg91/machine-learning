@@ -28,8 +28,6 @@ Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, 
 - Sistemas de recomendación.
 - Predecir si una persona es apta o no para recibir un préstamo bancario. Comprobar si los datos del cliente son similares o no a los de usuarios ya clasificados como morosos. 
 
-Banking system – KNN can be used to predict if a person is fit for loan approval. Or if he or she has similar traits to a defaulter. 
-
 # **Ejemplo**
 
 Dada la siguiente imagen...

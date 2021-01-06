@@ -23,5 +23,5 @@
 - **Algoritmo paramétrico** (_parametric algorithm_).
 
 - **Algoritmo no paramétrico** (_nonparametric algorithm_). 
-curva roc
+curva roc -> clasificador binario
 https://medium.com/@lamiae.hana/parametric-and-nonparametric-machine-learning-algorithms-ec9a21f25705

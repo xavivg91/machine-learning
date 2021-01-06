@@ -20,6 +20,8 @@ library(arules)
 library(arulesViz) 
 library(gridExtra)
 library(knitr) 
+library(shiny)
+library(shinythemes)
 
 # Read the data
 trans <- read.transactions("https://raw.githubusercontent.com/xavivg91/machine-learning/main/apriori/transactions.csv", format="single", cols=c(3,4), sep=",", rm.duplicates=TRUE)
@@ -208,15 +210,9 @@ plot(rules_sup1_conf50, method="graph", control=list(layout=igraph::in_circle())
 plot(rules_sup1_conf50, method="grouped")
 ```
 
-# arulesViz
-
 Con la librería arulesViz podemos crear gráficos y tablas interactivas. 
 
 ```{r results='hide'}
-# Load libraries
-library(shiny)
-library(shinythemes)
-
 # Apriori algorithm execution
 rules <- apriori(trans, parameter=list(sup=supportLevels[4], 
                              conf=confidenceLevels[9], target="rules"))

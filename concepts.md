@@ -14,7 +14,7 @@
 
 **Aprendizajes**
 
-- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a instancias nueva. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping_), y aplica esta misma función para predecir el _target_ de instancias nuevas. 
+- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a nuevas instancias. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping_), y aplica esta misma función para predecir el _target_ de instancias nuevas. 
 
   Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de         decisión, _k-Nearest Neighbors_, _Support Vector Machines_. 
   

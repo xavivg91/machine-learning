@@ -24,8 +24,6 @@
 
 - [**_Eager learning_**](https://en.wikipedia.org/wiki/Eager_learning) (aprendizaje entusiasta). A diferencia del aprendizaje basado en instancias, en este caso el algoritmo aprende un modelo global o una generalización a partir del conjunto de entrenamiento, antes de probar los datos de test. El modelo global construido se aplica para estimar la etiqueta de todas las nuevas instancias. Dedica más tiempo al entrenamiento (aprende un modelo) que a la predicción. Ejemplos: árboles de decisión, _Support Vector Machines_.
 
-- [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
-
 **Suposiciones del _training set_**
 
 - **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la distribución que siguen los datos de entrenamiento y utilizan una función para aproximarlos, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
@@ -36,4 +34,6 @@
   
 - **_Nonparametric algorithm_** (algoritmo no paramétrico). No hacen suposiciones acerca de cómo están distribuidos los datos de entrenamiento. La complejidad del modelo crece  a medida que la cantidad de datos de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad para adaptarse a todo tipo de datos de entrenamiento. Por otro lado, requieren más datos de entrenamiento, resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
 
+
+- [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 

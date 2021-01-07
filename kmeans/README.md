@@ -1,6 +1,6 @@
 # **El algoritmo k-means**
 
-_k-means_ es un algoritmo [**no supervisado**](https://en.wikipedia.org/wiki/Unsupervised_learning) que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Es decir, se segmenta un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿Qué significa que sea un algoritmo no supervisado? Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Veamos en más detalle las operaciones que realiza _k-means_:
+_k-means_ es un algoritmo [**no supervisado**](https://en.wikipedia.org/wiki/Unsupervised_learning) que se utiliza para **agrupar** observaciones que comparten características similares (clústers). Es decir, se segmenta un conjunto de _n_ observaciones en _k_ grupos o clústers. ¿Qué significa que sea un algoritmo no supervisado? Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Veamos en más detalle las operaciones que realiza _k-means_ (algoritmo de Lloyd):
 
 1. **Inicialización**. Se establecen _k_ centroides en el espacio de los datos, escogidos aleatoriamente. El valor _k_ lo indica el usuario al ejecutar el algoritmo. 
 
@@ -37,7 +37,7 @@ _k-means_ es un algoritmo [**no supervisado**](https://en.wikipedia.org/wiki/Uns
 
 1. En la primera imagen, _k-means_ genera aleatoriamente tres centroides en el espacio de los datos (_k=3_). No se ha empleado el método de Forgy, puesto que no ha utilizado observaciones de los datos como centroides iniciales (se puede observar en las siguientes imágenes, cuando los centroides iniciales se mueven de posición).
 
-2. En la segunda imagen, se asocia cada observación al centroide más cercando, formando tres clusters. Las particiones se representan mediante diagramas de Voronoi.
+2. En la segunda imagen, se asocia cada observación al centroide más cercano, formando tres clusters. Las particiones se representan mediante diagramas de Voronoi.
 
 3. Se actualiza la posición del centroide de cada grupo, en función del promedio de las observaciones pertenecientes. En el grupo rojo sólo hay una observación, por eso el centroide se coloca justo encima de ella.
 

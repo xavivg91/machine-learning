@@ -26,13 +26,12 @@
 
 - [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 
+- **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la distribución que siguen los datos de entrenamiento y utilizan una función para aproximarlos, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
+
+  La regresión lineal simple es un ejemplo de algoritmo paramétrico, ya que utiliza una recta para aproximar los datos de entrenamiento. Como hemos dicho anteriormente, da       igual que incrementemos la cantidad de datos de entrenamiento, una recta siempre va a requerir únicamente de dos parámetros (pendiente y ordenada al origen). El valor de los   parámetros o coeficientes de regresión debe estimarse para construir la recta que mejor se ajusta a los datos de entrenamiento. 
+  
+  ¿Qué ventajas tiene este método? Es fácil de entender y su entrenamiento es rápido, pero a costa de limitar la complejidad del modelo generado. Proporciona poca flexibilidad,    debido a que el ajuste a los datos depende de la forma de la función escogida.  
+  
+- **_Nonparametric algorithm_** (algoritmo no paramétrico). No hacen suposiciones acerca de cómo están distribuidos los datos de entrenamiento. La complejidad del modelo crece  a medida que la cantidad de datos de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad para adaptarse a todo tipo de datos de entrenamiento. Por otro lado, requieren más datos de entrenamiento, resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
 
 
-- **_Parametric algorithm_** (algoritmo paramétrico).
-
-- **_Nonparametric algorithm_** (algoritmo no paramétrico). 
-curva roc -> clasificador binario
-https://medium.com/@lamiae.hana/parametric-and-nonparametric-machine-learning-algorithms-ec9a21f25705
-da igual que incremente mucho el volumen de datos, se podran seguir expresando mediante un número finito de parametros
-https://sefiks.com/2020/05/02/parametric-and-non-parametric-models-in-machine-learning/
-https://www.aprendemachinelearning.com/que-es-overfitting-y-underfitting-y-como-solucionarlo/

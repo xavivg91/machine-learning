@@ -31,3 +31,4 @@
 - **_Nonparametric algorithm_** (algoritmo no paramétrico). 
 curva roc -> clasificador binario
 https://medium.com/@lamiae.hana/parametric-and-nonparametric-machine-learning-algorithms-ec9a21f25705
+https://sefiks.com/2020/05/02/parametric-and-non-parametric-models-in-machine-learning/

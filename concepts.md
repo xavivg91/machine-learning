@@ -6,15 +6,24 @@
 
 - **Instancia**. Observación, fila, registro, objeto, ejemplo, etc. en un conjunto de datos. En una tabla con datos de jugadores de baloncesto, por ejemplo, cada fila es una instancia y representa a un jugador de baloncesto diferente. A su vez, cada instancia se compone de diferentes **atributos** (_features_) categóricos o cuantitativos, como pueden ser la edad, peso, altura, años de experiencia, nacionalidad, liga, etc. de los deportistas.
 
-- [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos utilizado para entrenar un modelo. Estos datos están etiquetados (_labeled_) mediante una columna denominada variable objetivo o _target_. 
+- [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos utilizado para entrenar un modelo. Estos datos están etiquetados (_labeled_) mediante una columna denominada variable objetivo o salida (_target_ u _output_). 
 
-- **_Target_** (variable o atributo objetivo). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa).
+  Siguiendo con el ejemplo anterior, el conjunto de entrenamiento puede estar formado por un _output_ categórico llamado "Posición" (base, escolta, alero, ala-pivot y pivot) y   una serie de atributos cuantitativos como el peso, altura, y varias estadísticas individuales de los jugadores. 
+
+- **_Target_** u **_output_** (variable o atributo objetivo, salida). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa).
 
 - [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo, una vez ha sido entrenado, es predecir la variable objetivo de las instancias de prueba. 
 
+  En nuestro ejemplo de baloncesto, el _test set_ no incluye el _target_ "Posición", puesto que es lo que tenemos que predecir, y sólo está formado por las columnas                cuantitativas (peso, altura y estadísticas individuales).
+
 **Aprendizajes**
 
-- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, después de haber aprendido a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta/clase correspondiente a cualquier instancia de entrada. Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_. 
+- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, después de haber aprendido a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta/clase correspondiente a cualquier instancia nueva. Es decir, el algoritmo entrena con instancias ya etiquetadas (sabemos el _output_ o _target_), aprende una función que establece una correspondencia entre las entradas y la salida, y aplica esta misma función para predecir el _target_ de instancias nuevas. 
+
+  Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de         decisión, _k-Nearest Neighbors_, _Support Vector Machines_. 
+  
+  A target output is the true output or labels on a given dataset. The function that maps the input to its correct labels is called the target function. Therefore, the underlying goal of many machine learning methods is to produce a function that matches the target function as close as possible without giving up generalizability.  The target output can be used to compare the predictions of a model and determine its accuracy.
+aprende una función que establece una correspondencia entre las entradas y la salida
 
 - [**_Unsupervised learning_**](https://en.wikipedia.org/wiki/Unsupervised_learning) (aprendizaje no supervisado). Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Ejemplos: _k-means_, _Principal Component Analysis_.
 
@@ -33,3 +42,4 @@ curva roc -> clasificador binario
 https://medium.com/@lamiae.hana/parametric-and-nonparametric-machine-learning-algorithms-ec9a21f25705
 da igual que incremente mucho el volumen de datos, se podran seguir expresando mediante un número finito de parametros
 https://sefiks.com/2020/05/02/parametric-and-non-parametric-models-in-machine-learning/
+https://www.aprendemachinelearning.com/que-es-overfitting-y-underfitting-y-como-solucionarlo/

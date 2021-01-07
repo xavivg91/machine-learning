@@ -1,4 +1,4 @@
-# **Conceptos importantes**
+# **Conceptos**
 
 - [**Conjunto de datos**](https://en.wikipedia.org/wiki/Data_set) (_data set_). Colección de datos formada por columnas (atributos) y filas (instancias u observaciones). En algoritmos supervisados de _machine learning_, es necesario particionar nuestros datos en dos subconjuntos: conjunto de entrenamiento y conjunto de prueba.
 
@@ -16,7 +16,7 @@
 
 - [**Aprendizaje no supervisado**](https://en.wikipedia.org/wiki/Unsupervised_learning) (_unsupervised learning_). Las observaciones dadas en el conjunto de datos no están etiquetadas, no hay un conocimiento a priori ni ningún atributo objetivo que predecir. Ejemplos: _k-means_, _Principal Component Analysis_.
 
-- [**Aprendizaje vago o basado en instancias**](https://en.wikipedia.org/wiki/Lazy_learning) (_lazy or instance-based learning_). El algoritmo no aprende un modelo global o una generalización durante la fase de entrenamiento, simplemente guarda en memoria todas las instancias. El aprendizaje sucede en el mismo momento en el que se prueban los datos de test. El atributo objetivo es estimado de forma local, para cada nueva instancia. Su fase de entrenamiento es rápida (no construye un modelo global), mientras que la predicción es más lenta (modelo local para cada nueva instancia). Un ejemplo de algoritmo perezoso o basado en instancias es k-NN, donde la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. 
+- [**Aprendizaje vago o basado en instancias**](https://en.wikipedia.org/wiki/Lazy_learning) (_lazy or instance-based learning_). El algoritmo no aprende un modelo global o una generalización durante la fase de entrenamiento, simplemente guarda en memoria todas las instancias. El aprendizaje sucede en el mismo momento en el que se prueban los datos de test. El atributo objetivo es estimado de forma local, para cada nueva instancia. Su fase de entrenamiento es rápida (no construye un modelo global), mientras que la predicción es más lenta, puesto que compara cada nueva instancia con todas las instancias del conjunto de entrenamiento. Un ejemplo de algoritmo perezoso o basado en instancias es k-NN, donde la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. 
 
 - [**_Eager learning_**](https://en.wikipedia.org/wiki/Eager_learning). A diferencia del aprendizaje basado en instancias, en este caso el algoritmo aprende un modelo global o una generalización a partir del conjunto de entrenamiento, antes de probar los datos de test. El modelo global construido se aplica para estimar la clase/etiqueta de todas las nuevas instancias. Dedica más tiempo al entrenamiento (aprende un modelo) que a la predicción. Ejemplos: árboles de decisión, _Support Vector Machines_.
 

@@ -8,7 +8,7 @@
 
 - [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos utilizado para entrenar un modelo. Estos datos están etiquetados (_labeled_) mediante una columna denominada variable objetivo o salida (_target_ u _output_). 
 
-- **_Target_**, **_output_** o **label** (variable o atributo objetivo, salida, etiqueta). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa).
+- **_Target_**, **_output_** o **_label_** (variable o atributo objetivo, salida, etiqueta). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa).
 
 - [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo, una vez ha sido entrenado, es predecir la variable objetivo de las instancias de prueba. 
 

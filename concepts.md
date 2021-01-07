@@ -26,6 +26,8 @@
 
 - [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 
+**Suposiciones del _training set_**
+
 - **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la distribución que siguen los datos de entrenamiento y utilizan una función para aproximarlos, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
 
   La regresión lineal simple es un ejemplo de algoritmo paramétrico, ya que utiliza una recta para aproximar los datos de entrenamiento. Como hemos dicho anteriormente, da       igual que incrementemos la cantidad de datos de entrenamiento, una recta siempre va a requerir únicamente de dos parámetros (pendiente y ordenada al origen). El valor de los   parámetros o coeficientes de regresión debe estimarse para construir la recta que mejor se ajusta a los datos de entrenamiento. 

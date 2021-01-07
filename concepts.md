@@ -14,7 +14,7 @@
 
 **Aprendizajes**
 
-- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a nuevas instancias. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping_), y aplica esta misma función para predecir el _target_ de instancias nuevas. 
+- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a nuevas instancias. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping function_), y aplica esta misma función para predecir el _target_ de instancias nuevas. 
 
   Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de         decisión, _k-Nearest Neighbors_, _Support Vector Machines_. 
   
@@ -26,14 +26,15 @@
 
 **Suposiciones del _training set_**
 
-- **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la distribución que siguen los datos de entrenamiento y utilizan una función para aproximarlos, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
+- **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la función (_mapping function_) que establece una correspondencia entre los datos de entrada y el _target_ (siguen una relación lineal, por ejemplo). Utilizan la forma de una función para aproximar los datos de entrenamiento, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
 
   La regresión lineal simple es un ejemplo de algoritmo paramétrico, ya que utiliza una recta para aproximar los datos de entrenamiento. Como hemos dicho anteriormente, da       igual que incrementemos la cantidad de datos de entrenamiento, una recta siempre va a requerir únicamente de dos parámetros (pendiente y ordenada al origen). El valor de los   parámetros o coeficientes de regresión debe estimarse para construir la recta que mejor se ajusta a los datos de entrenamiento. 
   
-  ¿Qué ventajas tiene este método? Es fácil de entender y su entrenamiento es rápido, pero a costa de limitar la complejidad del modelo generado. Proporciona poca flexibilidad,    debido a que el ajuste a los datos depende de la forma de la función escogida.  
+  ¿Qué ventajas tiene este método? Es fácil de entender y su entrenamiento es rápido, pero a costa de limitar la complejidad del modelo generado. Proporciona poca flexibilidad,    debido a que el ajuste a los datos depende de la forma de la función escogida. 
   
 - **_Nonparametric algorithm_** (algoritmo no paramétrico). No hacen suposiciones acerca de cómo están distribuidos los datos de entrenamiento. La complejidad del modelo crece  a medida que la cantidad de datos de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad para adaptarse a todo tipo de datos de entrenamiento. Por otro lado, requieren más datos de entrenamiento, resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
 
 
 - [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
-
+mapping function
+https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/

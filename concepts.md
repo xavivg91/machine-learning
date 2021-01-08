@@ -38,6 +38,8 @@
   
 - **_Nonparametric algorithm_** (algoritmo no paramétrico). No hace suposiciones acerca de la forma de la función (_functional form_) que predice la variable objetivo. Es libre de aprender cualquier forma (_functional form_) de las instancias de entrenamiento. Es decir, no depende de una forma o distribución inicialmente definida, sino de los datos de entrenamiento observados ("_let the data speak for itself_"). La complejidad del modelo crece a medida que el número de instancias de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad y en estimaciones más adecuadas. Por otro lado, requieren más datos de entrenamiento (no hace suposiciones), resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
 
+  El incremento de complejidad y parámetros en un árbol de decisión, por ejemplo, hace aumentar su número de nodos, resultando en un árbol cada vez más ramificado. 
+  
   Estos algoritmos se utilizan cuando disponemos de muchos datos de entrenamiento, de los cuales no tenemos un conocimiento previo de su distribución. 
 
 

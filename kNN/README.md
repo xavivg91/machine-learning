@@ -10,7 +10,7 @@ El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de 
 
 Se trata de un algoritmo [**basado en instancias**](https://en.wikipedia.org/wiki/Instance-based_learning) ([_lazy learning_](https://en.wikipedia.org/wiki/Lazy_learning)). Esto significa que el algoritmo no aprende un modelo global o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con todas las instancias del conjunto de entrenamiento (guardadas en memoria). k-NN estima de forma local: la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. 
 
-Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no presupone una forma concreta de los datos de entrenamiento y no utiliza una función para aproximarlos. En la regresión lineal, por ejemplo, se utiliza la función de una recta para aproximar los datos. 
+Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no hace suposiciones acerca de la distribución de los datos de entrenamiento. La complejidad del modelo crece a medida que el número de instancias de entrenamiento aumenta (cuanto más complejo, más parámetros). La clasificacion o predicción sí está basada en la suposición de que las instancias cercanas en distancia son, potencialmente, similares. 
 
 **Ventajas**
 - Sencillo de aprender e implementar.
@@ -19,9 +19,9 @@ Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, 
 - Capaz de clasificar instancias en tres o más categorías (_multiclass classification_).
 
 **Inconvenientes**
-- Su rendimiento empeora a medida que aumenta el volumen de datos. 
+- Se vuelve significativamente lento a medida que el número de instancias de entrenamiento aumenta.
 - Sensible a _k_ y a la métrica de distancia o similitud utilizada. 
-- Computacionalmente costoso.
+- Computacionalmente costoso (guarda en memoria todas las instancias de entrenamiento).
 - Sensible a la [maldición de la dimensión](https://en.wikipedia.org/wiki/Curse_of_dimensionality).
 
 **Aplicaciones**

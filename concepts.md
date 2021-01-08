@@ -50,3 +50,4 @@
 - [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 
 deterministico probabilistico
+estimar predecir

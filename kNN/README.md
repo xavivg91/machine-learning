@@ -10,7 +10,7 @@ El algoritmo _k-Nearest Neighbors_ (_k_ vecinos más cercanos) es un método de 
 
 Se trata de un algoritmo [**basado en instancias**](https://en.wikipedia.org/wiki/Instance-based_learning) ([_lazy learning_](https://en.wikipedia.org/wiki/Lazy_learning)). Esto significa que el algoritmo no aprende un modelo global o una generalización a partir del conjunto de entrenamiento, sino que compara cada nueva instancia con todas las instancias del conjunto de entrenamiento (guardadas en memoria). k-NN estima de forma local: la clase/etiqueta de cada nueva instancia depende únicamente de sus _k_ vecinos más cercanos. 
 
-Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no hace suposiciones acerca de la distribución de los datos de entrenamiento. Una de las características de estos algoritmos es que a medida que el número de instancias de entrenamiento aumenta, más parámetros utilizan, dando lugar a una mayor complejoidad y flexibilidad. La clasificacion o predicción sí está basada en la suposición de que las instancias cercanas en distancia son, potencialmente, similares. 
+Además, k-NN está catalogado como un algoritmo **no paramétrico**, es decir, no hace suposiciones acerca de la distribución de los datos de entrenamiento. Una de las características de estos algoritmos es que a medida que el número de instancias de entrenamiento aumenta, más parámetros utilizan, dando lugar a una mayor complejidad y flexibilidad. La clasificacion o predicción sí está basada en la suposición de que las instancias cercanas en distancia son, potencialmente, similares. 
 
 **Ventajas**
 - Sencillo de aprender e implementar.

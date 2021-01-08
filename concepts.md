@@ -4,7 +4,7 @@
 
 - [**_Data set_**](https://en.wikipedia.org/wiki/Data_set) (conjunto de datos). Colección de datos formada por columnas (atributos) y filas (instancias u observaciones). En algoritmos supervisados de _machine learning_, es necesario particionar nuestros datos en dos subconjuntos: conjunto de entrenamiento y conjunto de prueba.
 
-- **Instancia**. Observación, fila, registro, objeto, ejemplo, etc. en un conjunto de datos. En una tabla con datos de jugadores de baloncesto, por ejemplo, cada fila es una instancia y representa a un jugador de baloncesto diferente. A su vez, cada instancia se compone de diferentes **atributos** categóricos o cuantitativos (_features_) , como pueden ser la edad, peso, altura, años de experiencia, nacionalidad, liga, etc. de los deportistas.
+- **Instancia**. Observación, fila, registro, objeto, ejemplo, etc. en un conjunto de datos. En una tabla con datos de jugadores de baloncesto, por ejemplo, cada fila es una instancia y representa a un jugador de baloncesto diferente. A su vez, cada instancia se compone de diferentes **atributos** categóricos o cuantitativos (_features_), como pueden ser la edad, peso, altura, años de experiencia, nacionalidad, liga, etc. de los deportistas.
 
 - [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos etiquetado (_labeled_) y utilizado para aprender un modelo.  
 

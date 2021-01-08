@@ -12,7 +12,7 @@
 
 - [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo aprendido durante el entrenamiento es predecir la variable objetivo de las instancias de prueba. 
 
-- **_Mapping or target function_**. Función que se deduce durante el entrenamiento y establece una correspondencia entre los datos de entrada y el _target_. Una vez construida, se utiliza esta misma función para predecir el _target_ de instancias nuevas. Se puede interpretar como una función <img src="https://render.githubusercontent.com/render/math?math=Y=f(x)"> que mapea los datos de entrada en una salida.
+- **_Mapping or target function_** (función objetivo). Función que se deduce durante el entrenamiento y establece una correspondencia entre los datos de entrada y el _target_. Una vez construida, se utiliza esta misma función para predecir el _target_ de instancias nuevas. Se puede interpretar como una función <img src="https://render.githubusercontent.com/render/math?math=Y=f(x)"> que mapea los datos de entrada en una salida.
 
 **Aprendizajes**
 

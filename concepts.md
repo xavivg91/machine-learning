@@ -8,7 +8,7 @@
 
 - [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos etiquetado (_labeled_) y utilizado para aprender un modelo.  
 
-- **Labels** y **_target_** (etiquetas, variable o atributo objetivo). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa). Existen pequeñas diferencias entre los términos _labels_ y _target_: el primero hace referencia a la salida real (nos viene dada) de los datos de entrada (_features_) en un conjunto de entrenamiento, mientras que el segundo se refiere a la salida predicha de la función objetivo aprendida durante el entrenamiendo. Resumiendo, en el entrenamiento se habla de _labels_ y en el test de _target_. 
+- **Labels** y **_target_** (etiquetas, variable o atributo objetivo). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa). Existen pequeñas diferencias entre los términos _labels_ y _target_: el primero hace referencia a la salida real (nos viene dada) de los datos de entrada (_features_) en un conjunto de entrenamiento, mientras que el segundo se refiere a la salida predicha por la función objetivo aprendida durante el entrenamiendo. Resumiendo, en el entrenamiento se habla de _labels_ y en el test de _target_. 
 
 - [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo aprendido durante el entrenamiento es predecir la variable objetivo de las instancias de prueba. 
 

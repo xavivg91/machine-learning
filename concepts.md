@@ -6,15 +6,17 @@
 
 - **Instancia**. Observación, fila, registro, objeto, ejemplo, etc. en un conjunto de datos. En una tabla con datos de jugadores de baloncesto, por ejemplo, cada fila es una instancia y representa a un jugador de baloncesto diferente. A su vez, cada instancia se compone de diferentes **atributos** (_features_) categóricos o cuantitativos, como pueden ser la edad, peso, altura, años de experiencia, nacionalidad, liga, etc. de los deportistas.
 
-- [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos utilizado para entrenar un modelo. Estos datos están etiquetados (_labeled_) mediante una columna denominada variable objetivo o salida (_target_ u _output_). 
+- [**_Training set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de entrenamiento). Subconjunto de datos utilizado para aprender un modelo. Estos datos están etiquetados (_labeled_) mediante una columna denominada variable objetivo o salida (_target_ u _output_). 
 
 - **_Target_**, **_output_** o **_label_** (variable o atributo objetivo, salida, etiqueta). Atributo que queremos predecir. Puede ser categórico ("Apto" o "No apto") o continuo (precio de una casa).
 
-- [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo, una vez ha sido entrenado, es predecir la variable objetivo de las instancias de prueba. 
+- [**_Test set_**](https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets) (conjunto de prueba). Subconjunto de datos utilizado para evaluar el modelo. La finalidad del modelo aprendido durante el entrenamiento es predecir la variable objetivo de las instancias de prueba. 
+
+- [**_Mapping function_**]. Función que se deduce durante el entrenamiento y establece una correspondencia entre los datos de entrada y el _target_. Una vez construida, se utiliza esta misma función para predecir el _target_ de instancias nuevas. Se puede interpretar como una función <img src="https://render.githubusercontent.com/render/math?math=Y=f(x)"> que mapea los datos de entrada en una salida.
 
 **Aprendizajes**
 
-- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a nuevas instancias. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping function_), y aplica esta misma función para predecir el _target_ de instancias nuevas. 
+- [**_Supervised learning_**](https://en.wikipedia.org/wiki/Supervised_learning) (aprendizaje supervisado). Tenemos etiquetado nuestro conjunto de datos de entrenamiento. Los algoritmos supervisados, mediante su aprendizaje a partir del conjunto de entrenamiento, deducen una función capaz de predecir la etiqueta correspondiente a nuevas instancias. Es decir, el algoritmo entrena con instancias ya etiquetadas (conocemos el _target_), aprende una función que establece una correspondencia entre los datos de entrada y el _target_ (_mapping function_), y posteriormente aplica esta misma función para predecir el _target_ de instancias nuevas. 
 
   Dentro de este tipo de aprendizaje, hablamos de un algoritmo de regresión si el atributo objetivo es numérico, y de clasificación si es categórico. Ejemplos: árboles de         decisión, _k-Nearest Neighbors_, _Support Vector Machines_. 
   
@@ -26,15 +28,25 @@
 
 **Suposiciones del _training set_**
 
-- **_Parametric algorithm_** (algoritmo paramétrico). Algoritmos que realizan suposiciones acerca de la función (_mapping function_) que establece una correspondencia entre los datos de entrada y el _target_ (siguen una relación lineal, por ejemplo). Utilizan la forma de una función para aproximar los datos de entrenamiento, con un número fijo de parámetros. La cantidad de datos de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la función escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros.
+A learning model that summarizes data with a set of parameters of fixed size (independent of the number of training examples) is called a parametric model. No matter how much data you throw at a parametric model, it won’t change its mind about how many parameters it needs.
 
-  La regresión lineal simple es un ejemplo de algoritmo paramétrico, ya que utiliza una recta para aproximar los datos de entrenamiento. Como hemos dicho anteriormente, da       igual que incrementemos la cantidad de datos de entrenamiento, una recta siempre va a requerir únicamente de dos parámetros (pendiente y ordenada al origen). El valor de los   parámetros o coeficientes de regresión debe estimarse para construir la recta que mejor se ajusta a los datos de entrenamiento. 
+Los primeros son aquellos que construyen la función que aproxima los datos de entrenamiento a la variable objetivo con un número fijo de parámetros, con independencia de la cantidad de datos con los que se entrene. Por ejemplo, un algoritmo de regresión lineal tiene la forma
+Los primeros son aquellos que construyen la función que aproxima los datos de entrenamiento a la variable objetivo
+los algoritmos no paramétricos no presuponen una forma concreta en el modelo a generar
+A learning model that summarizes data with a set of parameters of fixed size (independent of the number of training examples) is called a parametric model. No matter how much data you throw at a parametric model, it won’t change its mind about how many parameters it needs.
+An algorithm learns this target mapping function from training data.
+
+- **_Parametric algorithm_** (algoritmo paramétrico). Algoritmo que realiza suposiciones acerca de la forma de la función (_functional form_) que predice la variable objetivo. Simplifican la _mapping function_ a formas o distribuciones conocidas que pueden ser expresadas con un número fijo de parámetros. El número de instancias de entrenamiento no afecta en la complejidad del modelo, puesto que el número de parámetros para la forma escogida va a ser el mismo. Lo único que cambia son los valores de los parámetros, cuya función es ajustar la función a nuestros datos de entrenamiento. Una vez estimados, las predicciones son independientes de nuestros datos de entrenamiento, sólo necesitamos los parámetros.
+
+  La regresión lineal simple es un ejemplo de algoritmo paramétrico, ya que simplifica la _mapping function_ a una recta. Como hemos dicho anteriormente, da igual que              incrementemos el número de instancias de entrenamiento, una recta siempre va a requerir únicamente de dos parámetros (pendiente y ordenada al origen). El valor de los             parámetros o coeficientes de  regresión debe estimarse para construir la recta que mejor se ajusta a los datos de entrenamiento. 
   
-  ¿Qué ventajas tiene este método? Es fácil de entender y su entrenamiento es rápido, pero a costa de limitar la complejidad del modelo generado. Proporciona poca flexibilidad,    debido a que el ajuste a los datos depende de la forma de la función escogida. 
+  ¿Qué ventajas tiene este método? Es fácil de entender y su entrenamiento es rápido (número finito de parámetros), pero a costa de limitar la complejidad del modelo generado.       Proporciona poca flexibilidad,  debido a que el ajuste a los datos depende de la forma de la función escogida. 
   
-- **_Nonparametric algorithm_** (algoritmo no paramétrico). No hacen suposiciones acerca de cómo están distribuidos los datos de entrenamiento. La complejidad del modelo crece  a medida que la cantidad de datos de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad para adaptarse a todo tipo de datos de entrenamiento. Por otro lado, requieren más datos de entrenamiento, resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
+- **_Nonparametric algorithm_** (algoritmo no paramétrico). No hace suposiciones acerca de la forma de la función (_functional form_) que predice la variable objetivo. La complejidad del modelo crece a medida que el número de instancias de entrenamiento aumenta (cuanto más complejo, más parámetros). Esto se traduce en una mayor flexibilidad para adaptarse a todo tipo de datos de entrenamiento. Por otro lado, requieren más datos de entrenamiento, resultan más lentos (modelo más complejo a construir) y son propensos a _overfitting_. Ejemplos:  árboles de decisión, _k-Nearest Neighbors_, _Support Vector Machines_.
 
 
 - [**_Matrix confusion_**](https://en.wikipedia.org/wiki/Confusion_matrix) (matriz de confusión). Herramienta para evaluar los aciertos y errores de un modelo de aprendizaje supervisado.
 mapping function
 https://machinelearningmastery.com/parametric-and-nonparametric-machine-learning-algorithms/
+https://cfss.uchicago.edu/notes/statistical-learning/
+deterministico probabilistico

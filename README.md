@@ -7,8 +7,7 @@
 <!-- [![HitCount](http://hits.dwyl.com/xavivg91/machine-learning.svg)](http://hits.dwyl.com/xavivg91/machine-learning) -->
 
 [![GitHub Xavi](https://img.shields.io/github/followers/xavivg91?label=follow&style=social)](https://github.com/xavivg91/)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Xavier91vg.svg?style=social)](https://twitter.com/Xavier91vg)
-<!-- badges: end -->
+[![Twitter Follow](https://img.shields.io/twitter/url/https/twitter.com/Xavier91vg.svg?style=social&label=Follow%20%40Xavier91vg)](https://twitter.com/Xavier91vg)<!-- badges: end -->
                         
 In this repository you can find basic examples of how to apply some machine learning algorithms, using R or Python. I try to explain it in a simple way, step by step and with reproducible code. 
 
